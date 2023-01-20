@@ -12,9 +12,27 @@ namespace DesafioPOO.Models
             
         }
         // TODO: Sobrescrever o método "InstalarAplicativo"
-        public override void InstalarAplicativo(string nomeApp)
+        public override int InstalarAplicativo(string nomeApp)
         {
-            throw new NotImplementedException();
+            int valor = int.Parse(nomeApp);
+            switch(valor){
+                case 1:
+                    Console.WriteLine("Removendo aplicações já instaladas");
+                    Console.WriteLine("Instalando Nokia chamadas - Ligação");
+                    Console.WriteLine("Instalação concluída");
+                    break;
+                case 2:
+                    Console.WriteLine("Removendo aplicações já instaladas");
+                    Console.WriteLine("Instalando Nokia receptivo - Receber Ligação");
+                    Console.WriteLine("Instalação concluída");
+                    break;
+                case 3:
+                    Console.WriteLine("Removendo aplicações já instaladas");
+                    Console.WriteLine("Instalando Nokia Calendário - Datas e horas");
+                    Console.WriteLine("Instalação concluída");
+                    break;
+            }
+            return valor;
         }
     }
 }
